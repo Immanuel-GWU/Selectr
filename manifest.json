@@ -1,0 +1,25 @@
+{
+    "name": "Selectr",
+    "description": "Intelligently assists and suggests different unique selector(XPath, CSS Selector etc..) options for webpage elements",
+    "version": "1.0",
+    "manifest_version": 2,
+    "author": "Immanuel",
+    "icons": {
+        "16": "assets/icons/16.png",
+        "48": "assets/icons/48.png",
+        "128": "assets/icons/128.png"
+    },
+    "permissions": ["contextMenus", "<all_urls>",
+                    "tabs"],
+   
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["app/src/content/content.js"]
+        }
+    ],
+    "background":{
+        "persistent": false,
+        "scripts": ["background.js"]
+    }
+}
